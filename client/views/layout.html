@@ -11,7 +11,25 @@
   <base href="/">
 </head>
 <body>
-  <div ng-view></div>
+  <blog-nav></blog-nav>
+  <div class="container">
+    <div class='page-header'>
+      <h1>
+        <em class='text-primary'>Welcome to MEAN Blog!</em>
+        <small class='pull-right'>
+          <i class='fa fa-facebook text-info'></i>
+          <i class='fa fa-twitter text-default'></i>
+          <i class='fa fa-instagram text-success'></i>
+          <i class='fa fa-youtube text-danger'></i>
+          <i class='fa fa-google-plus text-warning'></i>
+        </small>    
+      </h1>
+    </div>
+    <div class="row">
+      <div ng-view></div>
+      <blog-sidebar></blog-sidebar>
+    </div>
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-route.js"></script>
   <script src="/javascripts/services.js"></script>

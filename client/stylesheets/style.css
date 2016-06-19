@@ -16,3 +16,10 @@ small.pull-right {
   top: 15px;
   font-size: 30px;
 }
+
+.blog-search {
+  position: relative;
+  left: -10px;
+  pointer-events: none;
+  border-radius: 0 4px 4px 0;
+}
