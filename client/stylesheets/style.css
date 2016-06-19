@@ -2,6 +2,10 @@
   letter-spacing: 1.5px;
 }
 
+img {
+  width: 100%;
+}
+
 .navbar {
   border-radius: 0;
   margin-bottom: 0;
@@ -18,8 +22,13 @@ small.pull-right {
 }
 
 .blog-search {
-  position: relative;
-  left: -10px;
+  position: absolute;
+  right: 15px;
+  top: 0;
   pointer-events: none;
   border-radius: 0 4px 4px 0;
+}
+
+.post-title {
+  margin-top: 0;
 }

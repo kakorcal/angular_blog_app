@@ -1,11 +1,39 @@
 <div class="col-md-9">
-  <form class='form-inline'>
-    <div class="form-group">
-      <input type="text" class='form-control' placeholder='Search...'>
-      <button class='btn btn-success blog-search'><i class='fa fa-search'></i></button>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="form-group">
+        <input type="text" class='form-control' placeholder='Search...'>
+        <button class='btn btn-success blog-search'><i class='fa fa-search'></i></button>
+      </div>
     </div>
-    <div class="form-group">
-      <!-- filters: votes, dates, categories -->
+    <div class="col-md-4">
+      <button class="btn btn-danger btn-block"><i class='fa fa-plus'></i> FILTERS</button>
     </div>
-  </form>
+  </div>
+  <div ng-repeat='post in vm.posts'>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="/assets/{{post.image_url}}" alt="pic">
+          </div>
+          <div class="col-md-9">
+            <div class="post-content">
+              <h3 class="page-header post-title">{{post.title}}</h3>
+              <p>{{post.content | limitTo: 300}}</p>              
+            </div>
+            <div class="post-meta">
+              <span class="post-date">Published: {{post.date | date: 'mediumDate'}}</span>
+              <span class="post-author">By: {{post.author}}</span>
+              <span class="post-votes pull-right">
+                Votes: {{post.votes}}
+                <i class='fa fa-thumbs-o-up'></i>
+                <i class='fa fa-thumbs-o-down'></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

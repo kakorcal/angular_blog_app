@@ -1,5 +1,6 @@
 (()=>{
-  angular.module('blog.component.nav', []).directive('blogNav', navDirective);
+  angular.module('blog.component.nav', [])
+    .directive('blogNav', navDirective);
 
   function navDirective(){
     return {
