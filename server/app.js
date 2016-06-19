@@ -13,7 +13,7 @@ app.use('/javascripts', express.static(`${__dirname}/../client/javascripts`));
 app.use('/api/blogs', routes.blogs);
 
 app.get('*', (req, res)=>{
-  res.sendFile('layout.html', {root: '../client'});
+  res.sendFile('/views/layout.html', {root: './client'});
 });
 
 app.listen(3000, ()=>{
