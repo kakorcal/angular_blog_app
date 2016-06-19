@@ -4,16 +4,16 @@
   function config($routeProvider, $locationProvider){
     $routeProvider
       .when('/blogs', {
-        templateUrl: '../views/blogs/index.html'
+        templateUrl: 'views/blogs/index.html'
       })
       .when('/blogs/new', {
-        templateUrl: '../views/blogs/new.html'
+        templateUrl: 'views/blogs/new.html'
       })
       .when('/blogs/:id', {
-        templateUrl: '../views/blogs/show.html'
+        templateUrl: 'views/blogs/show.html'
       })
       .when('/blogs/:id/edit', {
-        templateUrl: '../views/blogs/edit.html'
+        templateUrl: 'views/blogs/edit.html'
       })
       .otherwise({
         redirectTo: '/blogs'

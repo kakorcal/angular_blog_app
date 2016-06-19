@@ -42,6 +42,8 @@ router.put('/:id', (req, res)=>{
       return knex('posts').where('blog_id', +id).update(_.pick(req.body.blog, ['content']));
   }).then(()=>{
     res.send('Blog Post Updated');
+  }).catch(err=>{
+    res.send(err);
   });
 });
 
