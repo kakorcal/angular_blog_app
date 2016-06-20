@@ -4,7 +4,8 @@
     'blog.routes',
     'blog.services',
     'blog.filters',
-    'blog.component.posts',
+    'blog.component.index',
+    'blog.component.show',
     'blog.component.nav',
     'blog.component.sidebar'
   ]);

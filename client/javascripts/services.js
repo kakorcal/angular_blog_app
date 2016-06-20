@@ -9,6 +9,10 @@
       return $http.get(BASE_URL);
     };
 
+    this.getSinglePost = function(id){
+      return $http.get(`${BASE_URL}/${id}`);
+    };
+
     this.updatePost = function(data){
       return $http.put(`${BASE_URL}/${data.blog.id}`, data);
     };

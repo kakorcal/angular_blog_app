@@ -1,0 +1,34 @@
+//***************************************************************************
+  blogs.directive.js
+//***************************************************************************
+
+// (()=>{
+//   angular.module('blog.component.posts', [])
+//     .directive('blogPosts', postsDirective);
+
+//   function postsDirective(){
+//     return {
+//       restrict: 'E',
+//       scope: {},
+//       templateUrl: 'views/partials/_posts.html',
+//       controller: 'PostsController',
+//       controllerAs: 'vm',
+//     };
+//   }
+// })();
+
+//***************************************************************************
+  _posts.html
+//***************************************************************************
+
+<!-- <div class="row">
+  <div class="col-md-8">
+    <div class="form-group">
+      <input type="text" class='form-control' placeholder='Search...'>
+      <button class='btn btn-success blog-search'><i class='fa fa-search'></i></button>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <button class="btn btn-danger btn-block"><i class='fa fa-plus'></i> FILTERS</button>
+  </div>
+</div> -->

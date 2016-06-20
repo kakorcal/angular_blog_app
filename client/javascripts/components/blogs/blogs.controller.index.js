@@ -1,8 +1,8 @@
 (()=>{
-  angular.module('blog.component.posts', [])
-    .controller('PostsController', PostsController);
+  angular.module('blog.component.index', [])
+    .controller('IndexController', IndexController);
 
-  function PostsController({data:posts}, BlogServices,$location){
+  function IndexController({data:posts}, BlogServices,$location){
     const vm = this;
     vm.posts = posts;
     vm.toggleFilters = false;
@@ -26,5 +26,5 @@
     };
   }
 
-  PostsController.$inject = ['posts', 'BlogServices','$location'];
+  IndexController.$inject = ['posts', 'BlogServices','$location'];
 })();

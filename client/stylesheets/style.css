@@ -64,3 +64,16 @@ small.pull-right {
   color: #b94a48;
   cursor: pointer;
 }
+
+.single-post-title {
+  margin: 0;
+}
+
+.single-post-content {
+  white-space: pre-line;
+}
+
+.single-post-thumbnail {
+  float: left;
+  margin: 25px 20px 5px 0px;
+}

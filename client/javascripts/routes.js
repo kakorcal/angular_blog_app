@@ -5,7 +5,7 @@
     $routeProvider
       .when('/blogs', {
         templateUrl: 'views/blogs/index.html',
-        controller: 'PostsController',
+        controller: 'IndexController',
         controllerAs: 'vm',
         resolve: {
           posts: getAllPosts
@@ -15,7 +15,12 @@
         templateUrl: 'views/blogs/new.html'
       })
       .when('/blogs/:id', {
-        templateUrl: 'views/blogs/show.html'
+        templateUrl: 'views/blogs/show.html',
+        controller: 'ShowController',
+        controllerAs: 'vm',
+        resolve: {
+          post: getPostById
+        }
       })
       .when('/blogs/:id/edit', {
         templateUrl: 'views/blogs/edit.html'
@@ -30,6 +35,11 @@
     return BlogServices.getPosts();
   }
 
+  function getPostById(BlogServices, $route){
+    return BlogServices.getSinglePost($route.current.params.id);
+  }
+
   config.$inject = ['$routeProvider', '$locationProvider'];
   getAllPosts.$inject = ['BlogServices'];
+  getPostById.$inject = ['BlogServices', '$route']
 })();

@@ -1,6 +1,7 @@
 (()=>{
   angular.module('blog.filters', [])
     .filter('truncate', truncate)
+    .filter('lineBreak', lineBreak)
 
   function truncate(){
     return function(str, chars){
@@ -17,5 +18,11 @@
         return str;
       }
     };
+  }
+
+  function lineBreak(){
+    return function(str){
+      return str.replace(/\n/g, '<br>');
+    }
   }
 })();
