@@ -29,14 +29,38 @@ small.pull-right {
   border-radius: 0 4px 4px 0;
 }
 
+.blog-filter.jumbotron {
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+#votes, #dates, #authors, #categories {
+  height: 34px;
+  padding: 6px 30px 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.fa-sort {
+  position: relative;
+  right: 24px;
+  pointer-events: none;
+}
+
 .post-title {
   margin-top: 0;
 }
 
 .post-votes .fa-thumbs-o-up:hover {
   color: #3a87ad;
+  cursor: pointer;
 }
 
 .post-votes .fa-thumbs-o-down:hover {
-  /*color: #;*/
+  color: #b94a48;
+  cursor: pointer;
 }

@@ -5,49 +5,49 @@ exports.seed = function(knex, Promise) {
         title: 'Do Forex Trading Better Than Barack Obama',
         image_url: 'dog1.jpg',
         author: 'Steve',
-        date: new Date(),        
+        date: new Date("October 13, 2014"),        
         votes: -1
       },
       {
         title: '52 Ways To Avoid Probiotic Burnout',
         image_url: 'dog2.jpg',
         author: 'Uthra',
-        date: new Date(),
+        date: new Date("December 7, 2015"),
         votes: 2
       },
       {
         title: 'How To Turn Your 23 Amusingly Misspelled Tattoos That Will Make You Chuckle From Zero To Hero',
         image_url: 'dog3.jpg',
         author: 'Andrew',
-        date: new Date(),
+        date: new Date("August 1, 2015"),
         votes: -7
       },
       {
         title: '5 Things People Hate About Headphones',
         image_url: 'dog4.jpg',
         author: 'Parker',
-        date: new Date(),
+        date: new Date("January 25, 2016"),
         votes: 8
       },      
       {
         title: 'The A to Z Guide Of Coconut Oil',
         image_url: 'dog5.jpg',
         author: 'Andrew',
-        date: new Date(),
+        date: new Date("March 2, 2016"),
         votes: 32
       },      
       {
         title: 'Take The Stress Out Of Twitter',
         image_url: 'dog6.jpg',
         author: 'Uthra',
-        date: new Date(),
+        date: new Date("March 15, 2016"),
         votes: 0
       },
       {
         title: 'How To Lose Money With Children Menu Conspiracy',
         image_url: 'dog7.jpg',
         author: 'Steve',
-        date: new Date(),
+        date: new Date("November 8, 2015"),
         votes: 33
       }
     ]).returning('id');
@@ -61,7 +61,7 @@ Godard meh YOLO fixie, try-hard VHS intelligentsia. Drinking vinegar wayfarers c
       },
       {
         blog_id: ids[1],
-        content: `Lumbersexual cred messenger bag, umami truffaut thundercats swag letterpress microdosing. Readymade portland drinking vinegar DIY paleo shabby chic. Wayfarers man bun vinyl, ethical ramps fingerstache food truck messenger bag put a bird on it iPhone pabst helvetica. Marfa fashion axe quinoa, gochujang typewriter pabst biodiesel williamsburg. Kitsch blue bottle chicharrones heirloom, trust fund YOLO meh vinyl. Austin bitters gentrify chicharrones. Asymmetrical DIY polaroid godard lomo drinking vinegar pabst.
+        content: `Lumber cred messenger bag, umami truffaut thundercats swag letterpress microdosing. Readymade portland drinking vinegar DIY paleo shabby chic. Wayfarers man bun vinyl, ethical ramps fingerstache food truck messenger bag put a bird on it iPhone pabst helvetica. Marfa fashion axe quinoa, gochujang typewriter pabst biodiesel williamsburg. Kitsch blue bottle chicharrones heirloom, trust fund YOLO meh vinyl. Austin bitters gentrify chicharrones. Asymmetrical DIY polaroid godard lomo drinking vinegar pabst.
 
 Mixtape stumptown microdosing kickstarter. Banh mi 8-bit narwhal, literally 90's craft beer pork belly keytar echo park kickstarter DIY beard gochujang. Listicle knausgaard paleo messenger bag thundercats. Green juice gastropub artisan typewriter, 8-bit art party bicycle rights cardigan jean shorts freegan authentic austin. Craft beer hammock flexitarian put a bird on it, bushwick selfies post-ironic pinterest mustache dreamcatcher lomo banh mi twee. Organic venmo trust fund, narwhal XOXO pabst williamsburg master cleanse freegan tote bag ethical food truck. Blog pabst aesthetic mlkshk chicharrones.`
       },

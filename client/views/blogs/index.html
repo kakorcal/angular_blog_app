@@ -2,15 +2,62 @@
   <div class="row">
     <div class="col-md-8">
       <div class="form-group">
-        <input type="text" class='form-control' placeholder='Search...'>
+        <input type="text" class='form-control' placeholder='Search...' ng-model='vm.searchFilter'>
         <button class='btn btn-success blog-search'><i class='fa fa-search'></i></button>
       </div>
     </div>
     <div class="col-md-4">
-      <button class="btn btn-danger btn-block"><i class='fa fa-plus'></i> FILTERS</button>
+      <button class="btn btn-danger btn-block" ng-click='vm.toggleFilters = !vm.toggleFilters'><i class='fa fa-plus'></i> FILTERS</button>
     </div>
   </div>
-  <div ng-repeat='post in vm.posts'>
+  <div class="row">
+    <div class='col-md-12'>
+      <div class="blog-filter jumbotron" ng-show='vm.toggleFilters'>
+        <!-- TODO: ADD CATEGORIES FOR EACH POST -->
+        <!-- Filters: votes, dates, author, categories -->
+        <span>
+          <label for="votes">Votes: </label>
+          <select id="votes" ng-model='vm.voteFilter'>
+            <option selected></option>
+            <option value="-votes">Highest</option>
+            <option value="votes">Lowest</option>
+          </select>
+          <i class='fa fa-sort'></i>
+        </span> 
+        <span>
+          <label for="dates">Date: </label>
+          <select id="dates" ng-model='vm.dateFilter'>
+            <option selected></option>
+            <option value="-date">Latest</option>
+            <option value="date">Oldest</option>
+          </select>
+          <i class='fa fa-sort'></i>
+        </span>
+        <span>
+          <label for="authors">Author: </label>
+          <select id="authors" ng-model='vm.authorFilter'>
+            <option selected></option>
+            <option value="{{author}}" ng-repeat='author in vm.authors'>{{author}}</option>
+          </select>
+          <i class='fa fa-sort'></i>
+        </span>
+        <span>
+          <label for="categories">Categories: </label>
+          <select id="categories">
+            <option selected></option>
+            <option>N/A</option>
+          </select>
+          <i class='fa fa-sort'></i>
+        </span>
+      </div>
+    </div>  
+  </div>
+  <div ng-repeat='
+    post in vm.posts         | 
+    filter : vm.searchFilter | 
+    orderBy: vm.voteFilter   | 
+    orderBy: vm.dateFilter   |
+    filter : vm.authorFilter '>
     <div class="panel panel-default">
       <div class="panel-body">
         <div class="row">
@@ -33,9 +80,9 @@
               </span>
               <span class="post-votes pull-right">
                 Votes:
-                <i class='fa fa-thumbs-o-up fa-lg'></i>
+                <i class='fa fa-thumbs-o-up fa-lg' ng-click='vm.onVoteChange(post, true)'></i>
                 <span ng-class="post.votes >= 0 ? 'text-info' : 'text-danger'">{{post.votes}}</span>
-                <i class='fa fa-thumbs-o-down fa-lg'></i>
+                <i class='fa fa-thumbs-o-down fa-lg' ng-click='vm.onVoteChange(post, false)'></i>
               </span>
             </div>
           </div>
