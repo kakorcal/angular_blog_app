@@ -19,16 +19,23 @@
           </div>
           <div class="col-md-9">
             <div class="post-content">
-              <h3 class="page-header post-title">{{post.title}}</h3>
-              <p>{{post.content | limitTo: 300}}</p>              
+              <h3 class="page-header post-title">
+                <a href="#" class='text-info'>{{post.title | truncate: 45}}</a>
+              </h3>
+              <p>{{post.content | truncate: 250}}</p>              
             </div>
             <div class="post-meta">
-              <span class="post-date">Published: {{post.date | date: 'mediumDate'}}</span>
-              <span class="post-author">By: {{post.author}}</span>
+              <span class="post-date">
+                Published: {{post.date | date: 'mediumDate'}}
+              </span>
+              <span class="post-author">
+                by {{post.author}}
+              </span>
               <span class="post-votes pull-right">
-                Votes: {{post.votes}}
-                <i class='fa fa-thumbs-o-up'></i>
-                <i class='fa fa-thumbs-o-down'></i>
+                Votes:
+                <i class='fa fa-thumbs-o-up fa-lg'></i>
+                <span ng-class="post.votes >= 0 ? 'text-info' : 'text-danger'">{{post.votes}}</span>
+                <i class='fa fa-thumbs-o-down fa-lg'></i>
               </span>
             </div>
           </div>

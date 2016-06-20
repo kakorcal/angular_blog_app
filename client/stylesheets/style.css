@@ -32,3 +32,11 @@ small.pull-right {
 .post-title {
   margin-top: 0;
 }
+
+.post-votes .fa-thumbs-o-up:hover {
+  color: #3a87ad;
+}
+
+.post-votes .fa-thumbs-o-down:hover {
+  /*color: #;*/
+}
