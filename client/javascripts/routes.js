@@ -12,7 +12,9 @@
         }
       })
       .when('/blogs/new', {
-        templateUrl: 'views/blogs/new.html'
+        templateUrl: 'views/blogs/new.html',
+        controller: 'NewBlogController',
+        controllerAs: 'vm'
       })
       .when('/blogs/:id', {
         templateUrl: 'views/blogs/show.html',

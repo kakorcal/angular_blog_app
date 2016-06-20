@@ -13,6 +13,10 @@
       return $http.get(`${BASE_URL}/${id}`);
     };
 
+    this.createPost = function(data){
+      return $http.post(BASE_URL, data);
+    }
+
     this.updatePost = function(data){
       return $http.put(`${BASE_URL}/${data.blog.id}`, data);
     };

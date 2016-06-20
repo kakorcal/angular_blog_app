@@ -1,13 +1,16 @@
 <div class="col-md-9">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-6">
       <div class="form-group">
         <input type="text" class='form-control' placeholder='Search...' ng-model='vm.searchFilter'>
         <button class='btn btn-success blog-search'><i class='fa fa-search'></i></button>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
       <button class="btn btn-danger btn-block" ng-click='vm.toggleFilters = !vm.toggleFilters'><i class='fa fa-plus'></i> FILTERS</button>
+    </div>
+    <div class="col-md-3">
+      <a href='/blogs/new' class="btn btn-info btn-block"><i class='fa fa-pencil'></i> ADD POST</a>
     </div>
   </div>
   <div class="row">
@@ -62,7 +65,7 @@
       <div class="panel-body">
         <div class="row">
           <div class="col-md-3">
-            <img src="/assets/{{post.image_url}}" alt="pic">
+            <img src="{{post.image_url}}" alt="pic">
           </div>
           <div class="col-md-9">
             <div class="post-content">

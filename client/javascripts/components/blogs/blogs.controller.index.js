@@ -2,7 +2,7 @@
   angular.module('blog.component.index', [])
     .controller('IndexController', IndexController);
 
-  function IndexController({data:posts}, BlogServices,$location){
+  function IndexController({data:posts}, BlogServices){
     const vm = this;
     vm.posts = posts;
     vm.toggleFilters = false;
@@ -26,5 +26,5 @@
     };
   }
 
-  IndexController.$inject = ['posts', 'BlogServices','$location'];
+  IndexController.$inject = ['posts', 'BlogServices'];
 })();

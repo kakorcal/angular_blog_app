@@ -21,11 +21,17 @@
       <div class="row">
         <div class="col-md-12">
           <div class="single-post-thumbnail">
-            <img src="/assets/{{vm.post.image_url}}" alt="pic">
+            <img src="{{vm.post.image_url}}" alt="pic">
           </div>
           <div class="single-post-content">
             <p>{{vm.post.content}}</p>              
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <button class="btn btn-primary">EDIT</button>
+          <button class="btn btn-danger">DELETE</button>
         </div>
       </div>
     </div>

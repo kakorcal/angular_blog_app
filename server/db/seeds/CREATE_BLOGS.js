@@ -3,49 +3,49 @@ exports.seed = function(knex, Promise) {
     return knex('blogs').insert([
       {
         title: 'Do Forex Trading Better Than Barack Obama',
-        image_url: 'dog1.jpg',
+        image_url: '/assets/dog1.jpg',
         author: 'Steve',
         date: new Date("October 13, 2014"),        
         votes: -1
       },
       {
         title: '52 Ways To Avoid Probiotic Burnout',
-        image_url: 'dog2.jpg',
+        image_url: '/assets/dog2.jpg',
         author: 'Uthra',
         date: new Date("December 7, 2015"),
         votes: 2
       },
       {
         title: 'How To Turn Your 23 Amusingly Misspelled Tattoos That Will Make You Chuckle From Zero To Hero',
-        image_url: 'dog3.jpg',
+        image_url: '/assets/dog3.jpg',
         author: 'Andrew',
         date: new Date("August 1, 2015"),
         votes: -7
       },
       {
         title: '5 Things People Hate About Headphones',
-        image_url: 'dog4.jpg',
+        image_url: '/assets/dog4.jpg',
         author: 'Parker',
         date: new Date("January 25, 2016"),
         votes: 8
       },      
       {
         title: 'The A to Z Guide Of Coconut Oil',
-        image_url: 'dog5.jpg',
+        image_url: '/assets/dog5.jpg',
         author: 'Andrew',
         date: new Date("March 2, 2016"),
         votes: 32
       },      
       {
         title: 'Take The Stress Out Of Twitter',
-        image_url: 'dog6.jpg',
+        image_url: '/assets/dog6.jpg',
         author: 'Uthra',
         date: new Date("March 15, 2016"),
         votes: 0
       },
       {
         title: 'How To Lose Money With Children Menu Conspiracy',
-        image_url: 'dog7.jpg',
+        image_url: '/assets/dog7.jpg',
         author: 'Steve',
         date: new Date("November 8, 2015"),
         votes: 33

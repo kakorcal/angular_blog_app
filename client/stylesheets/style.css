@@ -55,6 +55,10 @@ small.pull-right {
   margin-top: 0;
 }
 
+.post-content p {
+  word-wrap: break-word;
+}
+
 .post-votes .fa-thumbs-o-up:hover {
   color: #3a87ad;
   cursor: pointer;
@@ -76,4 +80,5 @@ small.pull-right {
 .single-post-thumbnail {
   float: left;
   margin: 25px 20px 5px 0px;
+  max-width: 300px;
 }
