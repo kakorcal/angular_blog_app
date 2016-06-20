@@ -1,3 +1,4 @@
+<!-- TODO: CREATE DIRECTIVES FOR EITHER THE SEARCH OR LIST SECTION -->
 <div class="col-md-9">
   <div class="row">
     <div class="col-md-6">
@@ -70,16 +71,16 @@
           <div class="col-md-9">
             <div class="post-content">
               <h3 class="page-header post-title">
-                <a href="/blogs/{{post.id}}" class='text-info'>{{post.title | truncate: 45}}</a>
+                <a href="/blogs/{{post.id}}" class='text-info'>{{post.title || 'N/A' | truncate: 45}}</a>
               </h3>
-              <p>{{post.content | truncate: 250}}</p>              
+              <p>{{post.content || 'N/A' | truncate: 250}}</p>              
             </div>
             <div class="post-meta">
               <span class="post-date">
                 Published: {{post.date | date: 'mediumDate'}}
               </span>
               <span class="post-author">
-                by {{post.author}}
+                by {{post.author || 'N/A' }}
               </span>
               <span class="post-votes pull-right">
                 Votes:

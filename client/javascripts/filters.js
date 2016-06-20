@@ -1,13 +1,9 @@
 (()=>{
   angular.module('blog.filters', [])
     .filter('truncate', truncate)
-    .filter('lineBreak', lineBreak)
 
   function truncate(){
     return function(str, chars){
-      // title: 47 per line
-      // content: 74 per line
-      // if str is not a string, convert to string
       if(typeof str !== 'string') str = str + '';
 
       if(str.length > chars){
@@ -18,11 +14,5 @@
         return str;
       }
     };
-  }
-
-  function lineBreak(){
-    return function(str){
-      return str.replace(/\n/g, '<br>');
-    }
   }
 })();

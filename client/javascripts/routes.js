@@ -25,11 +25,16 @@
         }
       })
       .when('/blogs/:id/edit', {
-        templateUrl: 'views/blogs/edit.html'
+        templateUrl: 'views/blogs/edit.html',
+        controller: 'EditController',
+        controllerAs: 'vm',
+        resolve: {
+          post: getPostById
+        }
       })
       .otherwise({
         redirectTo: '/blogs'
-      })
+      });
     $locationProvider.html5Mode(true);
   } 
 

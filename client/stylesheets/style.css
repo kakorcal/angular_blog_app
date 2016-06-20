@@ -43,6 +43,7 @@ small.pull-right {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  width: 12%;
 }
 
 .fa-sort {

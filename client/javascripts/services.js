@@ -20,6 +20,10 @@
     this.updatePost = function(data){
       return $http.put(`${BASE_URL}/${data.blog.id}`, data);
     };
+
+    this.deletePost = function(id){
+      return $http.delete(`${BASE_URL}/${id}`);
+    }
   }
 
   BlogServices.$inject = ['$http'];
