@@ -1,5 +1,5 @@
 (()=>{
-  angular.module('blog.routes', []).config(config);
+  angular.module('blog.routes', ['ngRoute']).config(config);
 
   function config($routeProvider, $locationProvider){
     $routeProvider

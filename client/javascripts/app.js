@@ -1,6 +1,5 @@
 (()=>{
   angular.module('blogApp', [
-    'ngRoute',
     'blog.routes',
     'blog.services',
     'blog.filters',
